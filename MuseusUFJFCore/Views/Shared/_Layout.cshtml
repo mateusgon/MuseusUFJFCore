@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Museus UFJF</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-journal.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -26,15 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">MuseusUFJFCore</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Museus UFJF</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index"> Home </a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index"> Unidade </a></li>
+                    <li><a asp-area="" asp-controller="Units" asp-action="Index"> Unidade </a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Index"> Setor </a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About"> Acervo </a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"> Imagem </a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index"> Acervo </a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index"> Imagem </a></li>
                 </ul>
             </div>
         </div>
@@ -46,7 +46,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - MuseusUFJFCore</p>
+            <p>&copy; 2019 - Museus UFJF - GET Sistemas de Informação</p>
         </footer>
     </div>
 
