@@ -22,5 +22,20 @@ namespace MuseusUFJFCore.Models
         [Required(ErrorMessage = "O campo endereço é necessário")]
         [Display(Name = "Endereço")]
         public string Address { get; set; }
+
+        public ICollection<Section> Sections { get; set; } = new List<Section>();
+
+        public Unit()
+        {
+        }
+
+        public Unit(int unitId, string name, string description, string address)
+        {
+            UnitId = unitId;
+            Name = name;
+            Description = description;
+            Address = address;
+        }
+
     }
 }

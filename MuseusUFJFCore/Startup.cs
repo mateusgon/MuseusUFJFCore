@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using MuseusUFJFCore.Models;
+using MuseusUFJFCore.Services;
 
 namespace MuseusUFJFCore
 {
@@ -38,6 +39,8 @@ namespace MuseusUFJFCore
 
             services.AddDbContext<MuseusUFJFCoreContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MuseusUFJFCoreContext")));
+
+            services.AddScoped<SectionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

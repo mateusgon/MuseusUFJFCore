@@ -13,6 +13,8 @@ namespace MuseusUFJFCore.Models
         {
         }
 
-        public DbSet<MuseusUFJFCore.Models.Unit> Unit { get; set; }
+        public DbSet<Unit> Unit { get; set; }
+        public DbSet<Section> Section { get; set; }
+        public DbSet<Collection> Collection { get; set; }
     }
 }

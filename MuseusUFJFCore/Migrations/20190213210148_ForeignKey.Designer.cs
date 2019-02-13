@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MuseusUFJFCore.Models;
 
 namespace MuseusUFJFCore.Migrations
 {
     [DbContext(typeof(MuseusUFJFCoreContext))]
-    partial class MuseusUFJFCoreContextModelSnapshot : ModelSnapshot
+    [Migration("20190213210148_ForeignKey")]
+    partial class ForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
