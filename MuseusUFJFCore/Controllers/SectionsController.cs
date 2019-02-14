@@ -25,6 +25,15 @@ namespace MuseusUFJFCore.Controllers
             return View(await museusUFJFCoreContext.ToListAsync());
         }
 
+        public async Task<IActionResult> List(int? id)
+        {
+            var museusUFJFCoreContext = _context.Section.Include(s => s.Unit).Where(s => s.UnitId == id);
+            var unit = await _context.Unit
+                   .FirstOrDefaultAsync(m => m.UnitId == id);
+            ViewData["UnitName"] = unit.Name;
+            return View(await museusUFJFCoreContext.ToListAsync());
+        }
+
         // GET: Sections/Details/5
         public async Task<IActionResult> Details(int? id)
         {

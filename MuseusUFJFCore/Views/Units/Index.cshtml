@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Address)
             </th>
+            <th>
+                Setores da Unidade
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -37,11 +40,14 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
+                <a asp-area="" asp-controller="Sections" asp-action="List" asp-route-id="@item.UnitId"> Listar setores </a>
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.UnitId">Editar</a> |
                 <a asp-action="Details" asp-route-id="@item.UnitId">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.UnitId">Excluir</a>
+                <a asp-action="Delete" asp-route-id="@item.UnitId">Excluir</a> 
             </td>
         </tr>
-}
+}   
     </tbody>
 </table>

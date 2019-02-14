@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MuseusUFJFCore.Models.Section>
+
+@{
+    ViewData["Title"] = "Lista de setores da unidade";
+}
+
+<h2>Lista de setores da unidade: @ViewData["UnitName"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unit)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Responsible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit.Address)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
