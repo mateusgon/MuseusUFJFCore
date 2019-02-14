@@ -18,8 +18,10 @@ namespace MuseusUFJFCore.Models
         [Display(Name = "Responsável")]
         public string Responsible { get; set; }
 
+        [Display(Name = "Unidade")]
         public Unit Unit { get; set; }
 
+        [Display(Name = "Unidade do setor")]
         public int UnitId { get; set; }
 
         public ICollection<Collection> Collections { get; set; } = new List<Collection>();
